@@ -1,52 +1,34 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { CheckCircle, Award, Shield, TestTube, Users, Clock } from 'lucide-react';
-
 const Quality = () => {
-  const qualityFeatures = [
-    {
-      icon: TestTube,
-      title: "In-House Testing Laboratory",
-      description: "State-of-the-art testing facilities ensure every product meets stringent quality standards before delivery."
-    },
-    {
-      icon: Award,
-      title: "ISO 9001:2015 Certified",
-      description: "International quality management system certification guarantees consistent quality processes."
-    },
-    {
-      icon: Shield,
-      title: "ISI 458 Compliance",
-      description: "All products strictly adhere to Indian Standard specifications for precast concrete pipes."
-    },
-    {
-      icon: Users,
-      title: "Skilled Professionals",
-      description: "Expert team with years of experience in precast concrete manufacturing and quality control."
-    },
-    {
-      icon: Clock,
-      title: "Rigorous Testing Process",
-      description: "Every product undergoes comprehensive testing for strength, durability, and dimensional accuracy."
-    },
-    {
-      icon: CheckCircle,
-      title: "Quality Assurance",
-      description: "Multi-stage quality checks from raw materials to finished products ensure superior performance."
-    }
-  ];
-
-  const certifications = [
-    "ISO 9001:2015 Quality Management System",
-    "ISI 458 Standard Compliance",
-    "NHAI Approved Supplier Status",
-    "Bureau of Indian Standards (BIS) Certification",
-    "Environmental Compliance Certificates",
-    "Product Testing & Validation Reports"
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const qualityFeatures = [{
+    icon: TestTube,
+    title: "In-House Testing Laboratory",
+    description: "State-of-the-art testing facilities ensure every product meets stringent quality standards before delivery."
+  }, {
+    icon: Award,
+    title: "ISO 9001:2015 Certified",
+    description: "International quality management system certification guarantees consistent quality processes."
+  }, {
+    icon: Shield,
+    title: "ISI 458 Compliance",
+    description: "All products strictly adhere to Indian Standard specifications for precast concrete pipes."
+  }, {
+    icon: Users,
+    title: "Skilled Professionals",
+    description: "Expert team with years of experience in precast concrete manufacturing and quality control."
+  }, {
+    icon: Clock,
+    title: "Rigorous Testing Process",
+    description: "Every product undergoes comprehensive testing for strength, durability, and dimensional accuracy."
+  }, {
+    icon: CheckCircle,
+    title: "Quality Assurance",
+    description: "Multi-stage quality checks from raw materials to finished products ensure superior performance."
+  }];
+  const certifications = ["ISO 9001:2015 Quality Management System", "ISI 458 Standard Compliance", "NHAI Approved Supplier Status", "Bureau of Indian Standards (BIS) Certification", "Environmental Compliance Certificates", "Product Testing & Validation Reports"];
+  return <div className="min-h-screen">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -77,8 +59,7 @@ const Quality = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {qualityFeatures.map((feature, index) => (
-                <div key={index} className="card-industrial group">
+              {qualityFeatures.map((feature, index) => <div key={index} className="card-industrial group">
                   <div className="space-y-4">
                     <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                       <feature.icon className="h-8 w-8 text-accent" />
@@ -90,8 +71,7 @@ const Quality = () => {
                       {feature.description}
                     </p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </section>
@@ -123,9 +103,7 @@ const Quality = () => {
                   </p>
                 </div>
 
-                <button className="btn-industrial mt-8">
-                  Schedule Factory Visit
-                </button>
+                
               </div>
 
               <div className="animate-slide-in-right">
@@ -134,21 +112,10 @@ const Quality = () => {
                     Testing Parameters
                   </h3>
                   <ul className="space-y-4">
-                    {[
-                      "Load-bearing capacity testing",
-                      "Dimensional accuracy verification",
-                      "Water tightness assessment",
-                      "Crack load and ultimate load testing",
-                      "Absorption and permeability tests",
-                      "Three-edge bearing strength",
-                      "Joint performance evaluation",
-                      "Durability and weather resistance"
-                    ].map((test, index) => (
-                      <li key={index} className="flex items-center space-x-3">
+                    {["Load-bearing capacity testing", "Dimensional accuracy verification", "Water tightness assessment", "Crack load and ultimate load testing", "Absorption and permeability tests", "Three-edge bearing strength", "Joint performance evaluation", "Durability and weather resistance"].map((test, index) => <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
                         <span className="text-muted-foreground">{test}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </div>
               </div>
@@ -170,12 +137,10 @@ const Quality = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {certifications.map((cert, index) => (
-                <div key={index} className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300">
+              {certifications.map((cert, index) => <div key={index} className="bg-card border border-border rounded-xl p-6 text-center hover:shadow-elegant transition-all duration-300">
                   <Award className="h-12 w-12 text-accent mx-auto mb-4" />
                   <h3 className="font-semibold text-foreground">{cert}</h3>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="text-center mt-12">
@@ -187,8 +152,6 @@ const Quality = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Quality;
