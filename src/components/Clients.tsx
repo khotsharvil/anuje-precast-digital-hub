@@ -1,19 +1,7 @@
 import { Shield, Star, Award } from 'lucide-react';
-
 const Clients = () => {
-  const clients = [
-    "R. B. Velhal Infra Pvt. Ltd.",
-    "MKC Infrastructure Ltd.",
-    "KMV Infra Ltd.",
-    "S. M. Autade Pvt. Ltd.",
-    "Megha Engg. & Infra Ltd.",
-    "Shree Constructions",
-    "Modern Infrastructure Co.",
-    "Elite Engineering Works"
-  ];
-
-  return (
-    <section id="clients" className="py-20 bg-muted-light/30">
+  const clients = ["R. B. Velhal Infra Pvt. Ltd.", "MKC Infrastructure Ltd.", "KMV Infra Ltd.", "S. M. Autade Pvt. Ltd.", "Megha Engg. & Infra Ltd.", "Shree Constructions", "Modern Infrastructure Co.", "Elite Engineering Works"];
+  return <section id="clients" className="py-20 bg-muted-light/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -37,12 +25,9 @@ const Clients = () => {
 
         {/* Client Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {clients.map((client, index) => (
-            <div 
-              key={index} 
-              className="card-industrial text-center group animate-fade-in-up"
-              style={{animationDelay: `${index * 0.1}s`}}
-            >
+          {clients.map((client, index) => <div key={index} className="card-industrial text-center group animate-fade-in-up" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <div className="p-6">
                 <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   <Star className="h-8 w-8" />
@@ -51,17 +36,14 @@ const Clients = () => {
                   {client}
                 </h3>
               </div>
-            </div>
-          ))}
+            </div>)}
         </div>
 
         {/* Testimonial */}
         <div className="max-w-4xl mx-auto">
           <div className="bg-card border border-accent/20 rounded-2xl p-8 text-center shadow-elegant">
             <div className="flex justify-center mb-6">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="h-6 w-6 text-accent fill-current" />
-              ))}
+              {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 text-accent fill-current" />)}
             </div>
             <blockquote className="text-xl text-muted-foreground italic mb-6 leading-relaxed">
               "Anuje Precast Pipes has been our trusted partner for multiple infrastructure projects. 
@@ -74,14 +56,8 @@ const Clients = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
-          <button className="btn-hero">
-            See More Clients
-          </button>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Clients;
