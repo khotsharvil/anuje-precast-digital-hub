@@ -44,9 +44,7 @@ const Header = () => {
           </div>
 
           <div className="hidden md:block">
-            <Link to="/contact" className="btn-hero">
-              Request Quote
-            </Link>
+            
           </div>
 
           {/* Mobile menu button */}
