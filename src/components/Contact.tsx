@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Send, MessageSquare } from 'lucide-react';
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,22 +8,18 @@ const Contact = () => {
     email: '',
     message: ''
   });
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
-
-  return (
-    <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -91,97 +86,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="animate-slide-in-right">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Full Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="input-industrial w-full"
-                    placeholder="Your full name"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="input-industrial w-full"
-                    placeholder="Your company name"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="input-industrial w-full"
-                    placeholder="+91 XXXXX XXXXX"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="input-industrial w-full"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Project Details *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="input-industrial w-full resize-none"
-                  placeholder="Please describe your project requirements, quantities needed, timeline, and any specific specifications..."
-                ></textarea>
-              </div>
-
-              <button type="submit" className="btn-hero w-full group">
-                Send Message
-                <Send className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </button>
-            </form>
-          </div>
+          
         </div>
 
         {/* Map Section */}
@@ -200,8 +105,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
