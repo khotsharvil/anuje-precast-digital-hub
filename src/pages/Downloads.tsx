@@ -1,103 +1,81 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Download, FileText, Image, Award, CheckCircle } from 'lucide-react';
-
 const Downloads = () => {
-  const downloads = [
-    {
-      category: "Company Profile",
-      items: [
-        {
-          title: "Anuje Precast Pipes - Company Profile",
-          description: "Complete overview of our company, products, and capabilities",
-          type: "PDF",
-          size: "2.4 MB",
-          icon: FileText
-        },
-        {
-          title: "Manufacturing Capabilities Brochure",
-          description: "Detailed information about our production capacity and processes",
-          type: "PDF",
-          size: "1.8 MB",
-          icon: FileText
-        }
-      ]
-    },
-    {
-      category: "Product Specifications",
-      items: [
-        {
-          title: "RCC Pipes Technical Datasheet",
-          description: "Complete specifications for NP3 & NP4 pipes (450mm - 1800mm)",
-          type: "PDF",
-          size: "1.2 MB",
-          icon: FileText
-        },
-        {
-          title: "Box Culverts Specification Sheet",
-          description: "Technical details and dimensions for box culverts up to 2000mm",
-          type: "PDF",
-          size: "980 KB",
-          icon: FileText
-        },
-        {
-          title: "Custom Precast Solutions Guide",
-          description: "Options and specifications for tailored precast products",
-          type: "PDF",
-          size: "1.5 MB",
-          icon: FileText
-        }
-      ]
-    },
-    {
-      category: "Certifications",
-      items: [
-        {
-          title: "ISO 9001:2015 Certificate",
-          description: "Quality management system certification",
-          type: "PDF",
-          size: "356 KB",
-          icon: Award
-        },
-        {
-          title: "ISI 458 Compliance Certificate",
-          description: "Indian standard specification compliance document",
-          type: "PDF",
-          size: "445 KB",
-          icon: Award
-        },
-        {
-          title: "NHAI Approval Letter",
-          description: "National Highways Authority of India approval documentation",
-          type: "PDF",
-          size: "267 KB",
-          icon: Award
-        }
-      ]
-    },
-    {
-      category: "Project Gallery",
-      items: [
-        {
-          title: "Completed Projects Portfolio",
-          description: "High-resolution images of our major infrastructure projects",
-          type: "ZIP",
-          size: "15.2 MB",
-          icon: Image
-        },
-        {
-          title: "Manufacturing Facility Photos",
-          description: "Images of our state-of-the-art production facility",
-          type: "ZIP",
-          size: "8.7 MB",
-          icon: Image
-        }
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const downloads = [{
+    category: "Company Profile",
+    items: [{
+      title: "Anuje Precast Pipes - Company Profile",
+      description: "Complete overview of our company, products, and capabilities",
+      type: "PDF",
+      size: "2.4 MB",
+      icon: FileText
+    }, {
+      title: "Manufacturing Capabilities Brochure",
+      description: "Detailed information about our production capacity and processes",
+      type: "PDF",
+      size: "1.8 MB",
+      icon: FileText
+    }]
+  }, {
+    category: "Product Specifications",
+    items: [{
+      title: "RCC Pipes Technical Datasheet",
+      description: "Complete specifications for NP3 & NP4 pipes (450mm - 1800mm)",
+      type: "PDF",
+      size: "1.2 MB",
+      icon: FileText
+    }, {
+      title: "Box Culverts Specification Sheet",
+      description: "Technical details and dimensions for box culverts up to 2000mm",
+      type: "PDF",
+      size: "980 KB",
+      icon: FileText
+    }, {
+      title: "Custom Precast Solutions Guide",
+      description: "Options and specifications for tailored precast products",
+      type: "PDF",
+      size: "1.5 MB",
+      icon: FileText
+    }]
+  }, {
+    category: "Certifications",
+    items: [{
+      title: "ISO 9001:2015 Certificate",
+      description: "Quality management system certification",
+      type: "PDF",
+      size: "356 KB",
+      icon: Award
+    }, {
+      title: "ISI 458 Compliance Certificate",
+      description: "Indian standard specification compliance document",
+      type: "PDF",
+      size: "445 KB",
+      icon: Award
+    }, {
+      title: "NHAI Approval Letter",
+      description: "National Highways Authority of India approval documentation",
+      type: "PDF",
+      size: "267 KB",
+      icon: Award
+    }]
+  }, {
+    category: "Project Gallery",
+    items: [{
+      title: "Completed Projects Portfolio",
+      description: "High-resolution images of our major infrastructure projects",
+      type: "ZIP",
+      size: "15.2 MB",
+      icon: Image
+    }, {
+      title: "Manufacturing Facility Photos",
+      description: "Images of our state-of-the-art production facility",
+      type: "ZIP",
+      size: "8.7 MB",
+      icon: Image
+    }]
+  }];
+  return <div className="min-h-screen">
       <Header />
       <main className="pt-20">
         {/* Hero Section */}
@@ -117,8 +95,7 @@ const Downloads = () => {
         {/* Downloads Section */}
         <section className="py-20 bg-background">
           <div className="container mx-auto px-4">
-            {downloads.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="mb-16">
+            {downloads.map((category, categoryIndex) => <div key={categoryIndex} className="mb-16">
                 <div className="mb-8">
                   <h2 className="font-montserrat font-bold text-3xl text-primary mb-4">
                     {category.category}
@@ -127,16 +104,13 @@ const Downloads = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="card-industrial group hover:shadow-elegant transition-all duration-300">
+                  {category.items.map((item, itemIndex) => <div key={itemIndex} className="card-industrial group hover:shadow-elegant transition-all duration-300">
                       <div className="space-y-4">
                         <div className="flex items-start justify-between">
                           <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center">
                             <item.icon className="h-6 w-6 text-accent" />
                           </div>
-                          <span className="text-xs bg-secondary/20 text-secondary-foreground px-2 py-1 rounded-full">
-                            {item.type} • {item.size}
-                          </span>
+                          
                         </div>
                         
                         <div>
@@ -153,11 +127,9 @@ const Downloads = () => {
                           Download
                         </button>
                       </div>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </section>
 
@@ -220,8 +192,6 @@ const Downloads = () => {
         </section>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Downloads;
