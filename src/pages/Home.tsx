@@ -3,38 +3,41 @@ import Hero from '@/components/Hero';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle, Award, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Home = () => {
-  const highlights = [
-    { icon: Award, title: "ISO 9001:2015 Certified", description: "International quality standards" },
-    { icon: Shield, title: "ISI 458 Compliant", description: "Indian standard specifications" },
-    { icon: Users, title: "NHAI Approved", description: "Trusted government supplier" },
-    { icon: CheckCircle, title: "20+ Happy Clients", description: "Proven track record" }
-  ];
-
-  const quickProducts = [
-    {
-      title: "RCC Pipes",
-      subtitle: "NP3 & NP4 | 450mm – 1800mm",
-      description: "High load-bearing capacity pipes for drainage and infrastructure",
-      link: "/products"
-    },
-    {
-      title: "Box Culverts",
-      subtitle: "Up to 2000mm",
-      description: "Precision-engineered for road underpasses and utility tunnels",
-      link: "/products"
-    },
-    {
-      title: "Custom Precast",
-      subtitle: "Tailored Solutions",
-      description: "Bespoke precast solutions for unique infrastructure needs",
-      link: "/products"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen">
+  const highlights = [{
+    icon: Award,
+    title: "ISO 9001:2015 Certified",
+    description: "International quality standards"
+  }, {
+    icon: Shield,
+    title: "ISI 458 Compliant",
+    description: "Indian standard specifications"
+  }, {
+    icon: Users,
+    title: "NHAI Approved",
+    description: "Trusted government supplier"
+  }, {
+    icon: CheckCircle,
+    title: "20+ Happy Clients",
+    description: "Proven track record"
+  }];
+  const quickProducts = [{
+    title: "RCC Pipes",
+    subtitle: "NP3 & NP4 | 450mm – 1800mm",
+    description: "High load-bearing capacity pipes for drainage and infrastructure",
+    link: "/products"
+  }, {
+    title: "Box Culverts",
+    subtitle: "Up to 2000mm",
+    description: "Precision-engineered for road underpasses and utility tunnels",
+    link: "/products"
+  }, {
+    title: "Custom Precast",
+    subtitle: "Tailored Solutions",
+    description: "Bespoke precast solutions for unique infrastructure needs",
+    link: "/products"
+  }];
+  return <div className="min-h-screen">
       <Header />
       <Hero />
       
@@ -49,8 +52,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {highlights.map((highlight, index) => (
-              <div key={index} className="text-center p-6 bg-card border border-border rounded-xl hover:shadow-elegant transition-all duration-300">
+            {highlights.map((highlight, index) => <div key={index} className="text-center p-6 bg-card border border-border rounded-xl hover:shadow-elegant transition-all duration-300">
                 <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                   <highlight.icon className="h-8 w-8 text-accent" />
                 </div>
@@ -60,8 +62,7 @@ const Home = () => {
                 <p className="text-muted-foreground text-sm">
                   {highlight.description}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </section>
@@ -80,8 +81,7 @@ const Home = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {quickProducts.map((product, index) => (
-              <div key={index} className="card-industrial group">
+            {quickProducts.map((product, index) => <div key={index} className="card-industrial group">
                 <div className="space-y-4">
                   <h3 className="font-montserrat font-bold text-xl text-primary">
                     {product.title}
@@ -97,24 +97,19 @@ const Home = () => {
                     <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                   </Link>
                 </div>
-              </div>
-            ))}
+              </div>)}
           </div>
 
           <div className="text-center">
             <Link to="/products" className="btn-industrial mr-4">
               View All Products
             </Link>
-            <Link to="/contact" className="btn-hero">
-              Request Quote
-            </Link>
+            
           </div>
         </div>
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Home;
