@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Award, Shield, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -31,12 +32,13 @@ const Footer = () => {
           <div>
             <h4 className="font-montserrat font-bold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              <li><a href="#home" className="text-white/80 hover:text-accent transition-colors">Home</a></li>
-              <li><a href="#about" className="text-white/80 hover:text-accent transition-colors">About Us</a></li>
-              <li><a href="#products" className="text-white/80 hover:text-accent transition-colors">Products</a></li>
-              <li><a href="#quality" className="text-white/80 hover:text-accent transition-colors">Quality</a></li>
-              <li><a href="#clients" className="text-white/80 hover:text-accent transition-colors">Clients</a></li>
-              <li><a href="#contact" className="text-white/80 hover:text-accent transition-colors">Contact</a></li>
+              <li><Link to="/" className="text-white/80 hover:text-accent transition-colors">Home</Link></li>
+              <li><Link to="/about" className="text-white/80 hover:text-accent transition-colors">About Us</Link></li>
+              <li><Link to="/products" className="text-white/80 hover:text-accent transition-colors">Products</Link></li>
+              <li><Link to="/quality" className="text-white/80 hover:text-accent transition-colors">Quality</Link></li>
+              <li><Link to="/clients" className="text-white/80 hover:text-accent transition-colors">Clients</Link></li>
+              <li><Link to="/contact" className="text-white/80 hover:text-accent transition-colors">Contact</Link></li>
+              <li><Link to="/downloads" className="text-white/80 hover:text-accent transition-colors">Downloads</Link></li>
             </ul>
           </div>
 

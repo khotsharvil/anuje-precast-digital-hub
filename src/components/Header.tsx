@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -32,18 +38,19 @@ const Header = () => {
 
           {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="font-medium hover:text-accent transition-colors">Home</a>
-            <a href="#about" className="font-medium hover:text-accent transition-colors">About</a>
-            <a href="#products" className="font-medium hover:text-accent transition-colors">Products</a>
-            <a href="#quality" className="font-medium hover:text-accent transition-colors">Quality</a>
-            <a href="#clients" className="font-medium hover:text-accent transition-colors">Clients</a>
-            <a href="#contact" className="font-medium hover:text-accent transition-colors">Contact</a>
+            <Link to="/" className={`font-medium hover:text-accent transition-colors ${isActive('/') ? 'text-accent' : ''}`}>Home</Link>
+            <Link to="/about" className={`font-medium hover:text-accent transition-colors ${isActive('/about') ? 'text-accent' : ''}`}>About</Link>
+            <Link to="/products" className={`font-medium hover:text-accent transition-colors ${isActive('/products') ? 'text-accent' : ''}`}>Products</Link>
+            <Link to="/quality" className={`font-medium hover:text-accent transition-colors ${isActive('/quality') ? 'text-accent' : ''}`}>Quality</Link>
+            <Link to="/clients" className={`font-medium hover:text-accent transition-colors ${isActive('/clients') ? 'text-accent' : ''}`}>Clients</Link>
+            <Link to="/contact" className={`font-medium hover:text-accent transition-colors ${isActive('/contact') ? 'text-accent' : ''}`}>Contact</Link>
+            <Link to="/downloads" className={`font-medium hover:text-accent transition-colors ${isActive('/downloads') ? 'text-accent' : ''}`}>Downloads</Link>
           </div>
 
           <div className="hidden md:block">
-            <button className="btn-hero">
+            <Link to="/contact" className="btn-hero">
               Request Quote
-            </button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -59,15 +66,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a href="#home" className="font-medium hover:text-accent transition-colors">Home</a>
-              <a href="#about" className="font-medium hover:text-accent transition-colors">About</a>
-              <a href="#products" className="font-medium hover:text-accent transition-colors">Products</a>
-              <a href="#quality" className="font-medium hover:text-accent transition-colors">Quality</a>
-              <a href="#clients" className="font-medium hover:text-accent transition-colors">Clients</a>
-              <a href="#contact" className="font-medium hover:text-accent transition-colors">Contact</a>
-              <button className="btn-hero w-full mt-4">
+              <Link to="/" className={`font-medium hover:text-accent transition-colors ${isActive('/') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link to="/about" className={`font-medium hover:text-accent transition-colors ${isActive('/about') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link to="/products" className={`font-medium hover:text-accent transition-colors ${isActive('/products') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Products</Link>
+              <Link to="/quality" className={`font-medium hover:text-accent transition-colors ${isActive('/quality') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Quality</Link>
+              <Link to="/clients" className={`font-medium hover:text-accent transition-colors ${isActive('/clients') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Clients</Link>
+              <Link to="/contact" className={`font-medium hover:text-accent transition-colors ${isActive('/contact') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link to="/downloads" className={`font-medium hover:text-accent transition-colors ${isActive('/downloads') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Downloads</Link>
+              <Link to="/contact" className="btn-hero w-full mt-4" onClick={() => setIsMenuOpen(false)}>
                 Request Quote
-              </button>
+              </Link>
             </div>
           </div>
         )}
