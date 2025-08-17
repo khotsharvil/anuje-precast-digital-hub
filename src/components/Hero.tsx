@@ -82,9 +82,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-1 h-16 bg-white/30 rounded-full relative">
-          <div className="w-1 h-4 bg-accent rounded-full absolute top-0 animate-pulse"></div>
-        </div>
+        
       </div>
     </section>;
 };
