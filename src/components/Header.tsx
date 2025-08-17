@@ -1,17 +1,13 @@
 import { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
-  return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+  return <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
         <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-border/50">
@@ -44,7 +40,7 @@ const Header = () => {
             <Link to="/quality" className={`font-medium hover:text-accent transition-colors ${isActive('/quality') ? 'text-accent' : ''}`}>Quality</Link>
             <Link to="/clients" className={`font-medium hover:text-accent transition-colors ${isActive('/clients') ? 'text-accent' : ''}`}>Clients</Link>
             <Link to="/contact" className={`font-medium hover:text-accent transition-colors ${isActive('/contact') ? 'text-accent' : ''}`}>Contact</Link>
-            <Link to="/downloads" className={`font-medium hover:text-accent transition-colors ${isActive('/downloads') ? 'text-accent' : ''}`}>Downloads</Link>
+            
           </div>
 
           <div className="hidden md:block">
@@ -54,17 +50,13 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+          <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </nav>
 
         {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        {isMenuOpen && <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
               <Link to="/" className={`font-medium hover:text-accent transition-colors ${isActive('/') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
               <Link to="/about" className={`font-medium hover:text-accent transition-colors ${isActive('/about') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>About</Link>
@@ -77,11 +69,8 @@ const Header = () => {
                 Request Quote
               </Link>
             </div>
-          </div>
-        )}
+          </div>}
       </div>
-    </header>
-  );
+    </header>;
 };
-
 export default Header;
