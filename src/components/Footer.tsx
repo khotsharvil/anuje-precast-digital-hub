@@ -5,7 +5,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-[18px]">
           {/* Company Info */}
-          <div className="mx-[18px]">
+          <div className="mx-0">
             <h3 className="font-montserrat font-bold text-2xl mb-6">
               Anuje Precast Pipes
             </h3>
