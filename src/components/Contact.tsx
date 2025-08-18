@@ -95,12 +95,18 @@ const Contact = () => {
             <h3 className="font-montserrat font-bold text-2xl text-primary mb-6 text-center">
               Visit Our Manufacturing Facility
             </h3>
-            <div className="h-64 bg-secondary/20 rounded-lg flex items-center justify-center">
-              <div className="text-center text-muted-foreground">
-                <MapPin className="h-12 w-12 mx-auto mb-4 text-accent" />
-                <div className="font-semibold">Interactive Map</div>
-                <div className="text-sm">Kolhapur, Maharashtra, India</div>
-              </div>
+            <div className="h-80 bg-secondary/20 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8234567890123!2d74.24!3d16.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1007eccd87c95%3A0x72d5c5b5f5c5c5c5!2sKolhapur%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Anuje Precast Pipes Location"
+                className="rounded-lg"
+              ></iframe>
             </div>
           </div>
         </div>
