@@ -7,7 +7,7 @@ const Header = () => {
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-  return <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+  return <header className="sticky top-0 z-50 bg-background border-b border-border">
       <div className="container mx-auto px-4">
         {/* Top bar with contact info */}
         <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-border/50">
