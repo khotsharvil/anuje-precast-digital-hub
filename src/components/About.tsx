@@ -17,7 +17,7 @@ const About = () => {
     label: "Products Delivered",
     value: "10,000+"
   }];
-  return <section id="about" className="py-20 bg-background">
+  return <section id="about" className="bg-background py-0">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-slide-in-left">
