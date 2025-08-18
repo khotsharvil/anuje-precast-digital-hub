@@ -65,7 +65,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Location</div>
-                  <div className="text-muted-foreground">Kolhapur, Maharashtra, India</div>
+                  <div className="text-muted-foreground">NH 48, Pune-Bangluru Highway, near Halsiddhanath Sugar Factory, Yamgarni, Nipani, Karnataka 591241</div>
                 </div>
               </div>
             </div>
@@ -97,14 +97,14 @@ const Contact = () => {
             </h3>
             <div className="h-80 bg-secondary/20 rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8234567890123!2d74.24!3d16.69!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1007eccd87c95%3A0x72d5c5b5f5c5c5c5!2sKolhapur%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed/v1/place?key=&q=NH+48,+Pune+Bangluru+Highway,+near+Halsiddhanath+Sugar+Factory,+Yamgarni,+Nipani,+Karnataka+591241&zoom=15"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Anuje Precast Pipes Location"
+                title="Anuje Precast Pipes Manufacturing Facility"
                 className="rounded-lg"
               ></iframe>
             </div>
