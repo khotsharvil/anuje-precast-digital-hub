@@ -27,7 +27,7 @@ const Quality = () => {
     title: "Quality Assurance",
     description: "Multi-stage quality checks from raw materials to finished products ensure superior performance."
   }];
-  const certifications = ["ISO 9001:2015 Quality Management System", "ISI 458 Standard Compliance", "NHAI Approved Supplier Status", "Bureau of Indian Standards (BIS) Certification", "Environmental Compliance Certificates", "Product Testing & Validation Reports"];
+  const certifications = ["ISI 458 Standard Compliance", "NHAI Approved Supplier Status", "ISO 9001:2015 Quality Management System", "Bureau of Indian Standards (BIS) Certification", "Environmental Compliance Certificates", "Product Testing & Validation Reports"];
   return <div className="min-h-screen">
       <Header />
       <main className="pt-20">
