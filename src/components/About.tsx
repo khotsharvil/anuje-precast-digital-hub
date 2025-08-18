@@ -1,15 +1,23 @@
 import { Target, Users, Award, Truck } from 'lucide-react';
-
 const About = () => {
-  const stats = [
-    { icon: Award, label: "Years Experience", value: "15+" },
-    { icon: Users, label: "Happy Clients", value: "100+" },
-    { icon: Target, label: "Projects Completed", value: "500+" },
-    { icon: Truck, label: "Products Delivered", value: "10,000+" }
-  ];
-
-  return (
-    <section id="about" className="py-20 bg-background">
+  const stats = [{
+    icon: Award,
+    label: "Years Experience",
+    value: "15+"
+  }, {
+    icon: Users,
+    label: "Happy Clients",
+    value: "100+"
+  }, {
+    icon: Target,
+    label: "Projects Completed",
+    value: "500+"
+  }, {
+    icon: Truck,
+    label: "Products Delivered",
+    value: "10,000+"
+  }];
+  return <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-slide-in-left">
@@ -38,15 +46,12 @@ const About = () => {
               </p>
             </div>
 
-            <button className="btn-industrial mt-8">
-              Learn More About Us
-            </button>
+            
           </div>
 
           <div className="animate-slide-in-right">
             <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center p-6 bg-card border border-border rounded-xl hover:shadow-elegant transition-all duration-300">
+              {stats.map((stat, index) => <div key={index} className="text-center p-6 bg-card border border-border rounded-xl hover:shadow-elegant transition-all duration-300">
                   <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                     <stat.icon className="h-8 w-8 text-accent" />
                   </div>
@@ -56,8 +61,7 @@ const About = () => {
                   <div className="text-muted-foreground font-medium">
                     {stat.label}
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             <div className="mt-8 p-6 bg-gradient-industrial rounded-xl text-white">
@@ -84,8 +88,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
