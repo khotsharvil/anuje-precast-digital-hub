@@ -36,7 +36,7 @@ const Hero = () => {
           {/* Trust Indicators */}
           <div style={{
           animationDelay: '0.6s'
-        }} className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up py-0 my-0">
+        }} className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up py-0 my-0 mx-0 px-0">
             <div className="flex items-center space-x-3 text-white">
               <div className="p-2 bg-accent/20 rounded-lg">
                 <Award className="h-6 w-6 text-accent" />
@@ -57,7 +57,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex items-center space-x-3 text-white py-0 mx-[70px]">
+            <div className="flex items-center space-x-3 text-white py-0 mx-0">
               <div className="p-2 bg-accent/20 rounded-lg">
                 <Shield className="h-6 w-6 text-accent" />
               </div>
