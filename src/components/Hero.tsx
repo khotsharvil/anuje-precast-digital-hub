@@ -9,7 +9,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 py-0 my-0">
         <div className="max-w-4xl my-[12px]">
           <h1 className="font-montserrat font-bold text-5xl md:text-7xl text-white mb-6 animate-fade-in-up my-[11px]">
             Building Durable Futures with
@@ -34,9 +34,9 @@ const Hero = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up" style={{
+          <div style={{
           animationDelay: '0.6s'
-        }}>
+        }} className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up py-0 my-0">
             <div className="flex items-center space-x-3 text-white">
               <div className="p-2 bg-accent/20 rounded-lg">
                 <Award className="h-6 w-6 text-accent" />
@@ -82,9 +82,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-1 h-16 bg-white/30 rounded-full relative">
-          <div className="w-1 h-4 bg-accent rounded-full absolute top-0 animate-pulse"></div>
-        </div>
+        
       </div>
     </section>;
 };
