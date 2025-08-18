@@ -65,7 +65,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Location</div>
-                  <div className="text-muted-foreground">Kolhapur, Maharashtra, India</div>
+                  <div className="text-muted-foreground">NH 48, Pune -Bangluru Highway, near Halsiddhanath Sugar Factory, Yamgarni, Nipani, Karnataka 591241</div>
                 </div>
               </div>
             </div>
