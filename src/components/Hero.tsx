@@ -57,7 +57,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="flex items-center space-x-3 text-white">
+            <div className="flex items-center space-x-3 text-white py-0 mx-[70px]">
               <div className="p-2 bg-accent/20 rounded-lg">
                 <Shield className="h-6 w-6 text-accent" />
               </div>
