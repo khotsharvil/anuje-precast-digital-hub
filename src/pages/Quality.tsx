@@ -80,7 +80,7 @@ const Quality = () => {
         <section className="py-20 bg-muted-light/30">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="animate-slide-in-left">
+              <div className="animate-slide-in-left px-[15px]">
                 <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-6">
                   Rigorous <span className="text-accent">Testing Process</span>
                 </h2>
