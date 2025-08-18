@@ -19,7 +19,7 @@ const Contact = () => {
     // Handle form submission here
     console.log('Form submitted:', formData);
   };
-  return <section id="contact" className="py-20 bg-background">
+  return <section id="contact" className="bg-background py-0">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -95,15 +95,8 @@ const Contact = () => {
             <h3 className="font-montserrat font-bold text-2xl text-primary mb-6 text-center">
               Visit Our Manufacturing Facility
             </h3>
-            <div 
-              className="h-64 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => window.open('https://maps.app.goo.gl/HuuV2FB2qQixpEuL9', '_blank')}
-            >
-              <img 
-                src="/lovable-uploads/7cc9360e-9920-4e93-a02d-4671504b4d17.png"
-                alt="Anuje Precast Pipes Location Map - NH 48, Yamgarni, Nipani, Karnataka"
-                className="w-full h-full object-cover"
-              />
+            <div className="h-64 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => window.open('https://maps.app.goo.gl/HuuV2FB2qQixpEuL9', '_blank')}>
+              <img src="/lovable-uploads/7cc9360e-9920-4e93-a02d-4671504b4d17.png" alt="Anuje Precast Pipes Location Map - NH 48, Yamgarni, Nipani, Karnataka" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
