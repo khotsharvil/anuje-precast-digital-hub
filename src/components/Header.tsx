@@ -62,10 +62,8 @@ const Header = () => {
               <Link to="/quality" className={`font-medium hover:text-accent transition-colors ${isActive('/quality') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Quality</Link>
               <Link to="/clients" className={`font-medium hover:text-accent transition-colors ${isActive('/clients') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Clients</Link>
               <Link to="/contact" className={`font-medium hover:text-accent transition-colors ${isActive('/contact') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
-              <Link to="/downloads" className={`font-medium hover:text-accent transition-colors ${isActive('/downloads') ? 'text-accent' : ''}`} onClick={() => setIsMenuOpen(false)}>Downloads</Link>
-              <Link to="/contact" className="btn-hero w-full mt-4" onClick={() => setIsMenuOpen(false)}>
-                Request Quote
-              </Link>
+              
+              
             </div>
           </div>}
       </div>
