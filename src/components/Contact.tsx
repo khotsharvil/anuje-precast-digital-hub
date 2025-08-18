@@ -61,7 +61,7 @@ const Contact = () => {
               
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                  <MapPin className="h-6 w-6 text-white" />
+                  <MapPin className="h-6 w-6 text-white px-0 mx-[12px]" />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Location</div>
