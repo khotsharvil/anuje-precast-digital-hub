@@ -6,7 +6,7 @@ import customPrecastImage from '@/assets/custom-precast.jpg';
 const Products = () => {
   const products = [
     {
-      title: "RCC Pipes (NP3 & NP4)",
+      title: "RCC Pipes",
       subtitle: "450mm – 1800mm",
       description: "High load-bearing capacity, smooth finish, long service life for all drainage and infrastructure needs.",
       features: ["High load-bearing capacity", "Smooth finish", "Long service life"],
