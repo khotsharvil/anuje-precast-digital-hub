@@ -75,13 +75,13 @@ const ManufacturingSlideshow = () => {
             <CarouselContent>
               {slides.map((slide, index) => (
                 <CarouselItem key={index}>
-                  <div className="relative h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden group shadow-2xl">
-                    {/* Image with overlay */}
-                    <div className="absolute inset-0">
+                  <div className="relative rounded-2xl overflow-hidden group shadow-2xl bg-muted/20">
+                    {/* Image container with preserved aspect ratio */}
+                    <div className="relative">
                       <img
                         src={slide.image}
                         alt={slide.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105 max-h-[300px] sm:max-h-[400px] md:max-h-[500px] lg:max-h-[600px]"
                         loading="lazy"
                       />
                       {/* Gradient overlay */}
