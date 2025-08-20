@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import ManufacturingSlideshow from '@/components/ManufacturingSlideshow';
 import Footer from '@/components/Footer';
 import { ArrowRight, CheckCircle, Award, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -40,6 +41,7 @@ const Home = () => {
   return <div className="min-h-screen">
       <Header />
       <Hero />
+      <ManufacturingSlideshow />
       
       {/* Highlights Section */}
       <section className="py-16 bg-muted-light/30">
