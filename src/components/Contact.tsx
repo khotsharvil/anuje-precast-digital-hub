@@ -79,7 +79,10 @@ const Contact = () => {
                   <div className="text-white/80">Get instant responses to your queries</div>
                 </div>
               </div>
-              <button className="bg-white text-accent px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors w-full">
+              <button 
+                className="bg-white text-accent px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors w-full"
+                onClick={() => window.open('https://wa.me/919822698811', '_blank')}
+              >
                 Chat on WhatsApp
               </button>
             </div>
@@ -95,7 +98,7 @@ const Contact = () => {
             <h3 className="font-montserrat font-bold text-2xl text-primary mb-6 text-center">
               Visit Our Manufacturing Facility
             </h3>
-            <div className="h-64 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => window.open('https://maps.app.goo.gl/HuuV2FB2qQixpEuL9', '_blank')}>
+            <div className="h-64 rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity" onClick={() => window.open('https://maps.app.goo.gl/xXysbT4z3UXyw7Gt6', '_blank')}>
               <img src="/lovable-uploads/7cc9360e-9920-4e93-a02d-4671504b4d17.png" alt="Anuje Precast Pipes Location Map - NH 48, Yamgarni, Nipani, Karnataka" className="w-full h-full object-cover" />
             </div>
           </div>
