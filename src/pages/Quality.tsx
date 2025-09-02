@@ -109,7 +109,7 @@ const Quality = () => {
                     Testing Parameters
                   </h3>
                   <ul className="space-y-4">
-                    {["Load-bearing capacity testing", "Dimensional accuracy verification", "Water tightness assessment", "Crack load and ultimate load testing", "Absorption and permeability tests", "Three-edge bearing strength", "Joint performance evaluation", "Durability and weather resistance"].map((test, index) => <li key={index} className="flex items-center space-x-3">
+                    {["Hydrostatic test", "Three edge bearing test", "Permeability test", "Pipes are tested in accordance with IS 458 regulation"].map((test, index) => <li key={index} className="flex items-center space-x-3">
                         <CheckCircle className="h-5 w-5 text-accent flex-shrink-0" />
                         <span className="text-muted-foreground">{test}</span>
                       </li>)}
