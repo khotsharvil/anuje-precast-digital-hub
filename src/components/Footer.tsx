@@ -47,8 +47,8 @@ const Footer = () => {
               <li className="text-white/80">RCC Pipes (NP3 & NP4)</li>
               <li className="text-white/80">Box Culverts</li>
               <li className="text-white/80">Custom Precast Solutions</li>
-              <li className="text-white/80">Drainage Systems</li>
-              <li className="text-white/80">Infrastructure Solutions</li>
+              
+              
             </ul>
           </div>
 
