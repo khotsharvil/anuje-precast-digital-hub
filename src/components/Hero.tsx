@@ -40,6 +40,16 @@ const Hero = () => {
         }} className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up py-0 my-0 mx-0 px-0">
             <div className="flex items-center space-x-3 text-white">
               <div className="p-2 bg-accent/20 rounded-lg">
+                <Award className="h-6 w-6 text-accent" />
+              </div>
+              <div>
+                <div className="font-semibold">ISO 9001:2015</div>
+                <div className="text-sm text-white/80">Certified</div>
+              </div>
+            </div>
+            
+            <div className="flex items-center space-x-3 text-white">
+              <div className="p-2 bg-accent/20 rounded-lg">
                 <CheckCircle className="h-6 w-6 text-accent" />
               </div>
               <div>
@@ -60,20 +70,10 @@ const Hero = () => {
             
             <div className="flex items-center space-x-3 text-white">
               <div className="p-2 bg-accent/20 rounded-lg">
-                <Award className="h-6 w-6 text-accent" />
-              </div>
-              <div>
-                <div className="font-semibold">ISO 9001:2015</div>
-                <div className="text-sm text-white/80">Certified</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3 text-white">
-              <div className="p-2 bg-accent/20 rounded-lg">
                 <Users className="h-6 w-6 text-accent" />
               </div>
               <div>
-                <div className="font-semibold">20+ Companies</div>
+                <div className="font-semibold">30+ Companies</div>
                 <div className="text-sm text-white/80">Trust Us</div>
               </div>
             </div>
