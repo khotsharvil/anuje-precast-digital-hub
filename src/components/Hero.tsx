@@ -1,4 +1,5 @@
 import { CheckCircle, Award, Shield, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-pipes.jpg';
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center">
@@ -28,9 +29,9 @@ const Hero = () => {
             <button className="btn-hero">
               Request a Quote
             </button>
-            <button className="btn-outline-hero text-slate-50">
+            <Link to="/products" className="btn-outline-hero text-slate-50">
               Explore Products
-            </button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
