@@ -19,7 +19,7 @@ const Home = () => {
     description: "Trusted government supplier"
   }, {
     icon: CheckCircle,
-    title: "20+ Happy Clients",
+    title: "30+ Happy Clients",
     description: "Proven track record"
   }];
   const quickProducts = [{
