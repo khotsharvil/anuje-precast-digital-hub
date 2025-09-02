@@ -38,10 +38,7 @@ const Quality = () => {
               Quality You Can <span className="text-accent">Trust</span>
             </h1>
             <div className="w-24 h-1 bg-accent mx-auto mb-8"></div>
-            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">
-              Our commitment to excellence is backed by rigorous testing, international certifications, 
-              and a proven track record of delivering superior precast solutions for critical infrastructure projects.
-            </p>
+            <p className="text-xl text-white/90 max-w-4xl mx-auto leading-relaxed">Our commitment to excellence is backed by rigorous testing, certifications, and a proven track record of delivering superior precast solutions for critical infrastructure projects.</p>
           </div>
         </section>
 
