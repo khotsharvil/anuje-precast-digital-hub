@@ -6,7 +6,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img src={heroImage} alt="Precast concrete manufacturing facility with pipes and industrial equipment" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/55 to-primary/35"></div>
       </div>
 
       {/* Content */}
