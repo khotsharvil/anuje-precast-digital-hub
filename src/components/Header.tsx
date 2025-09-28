@@ -12,14 +12,14 @@ const Header = () => {
         {/* Top bar with contact info */}
         <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-border/50">
           <div className="flex items-center space-x-4 text-muted-foreground">
-            <div className="flex items-center space-x-2">
+            <a href="tel:+919822698811" className="flex items-center space-x-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4 text-accent" />
               <span>+91 9822698811</span>
-            </div>
-            <div className="flex items-center space-x-2">
+            </a>
+            <a href="mailto:anujepipes@gmail.com" className="flex items-center space-x-2 hover:text-accent transition-colors">
               <Mail className="h-4 w-4 text-accent" />
               <span>anujepipes@gmail.com</span>
-            </div>
+            </a>
           </div>
           <div className="text-primary font-medium">
             ISO 9001:2015 Certified | NHAI Approved
