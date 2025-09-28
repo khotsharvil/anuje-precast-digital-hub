@@ -33,11 +33,7 @@ const About = () => {
                 of modern infrastructure projects.
               </p>
               
-              <p>
-                With modern machinery, in-house testing laboratories, and skilled professionals, 
-                we deliver durable, precise, and reliable products that meet global standards 
-                including ISO 9001:2015 certification and ISI 458 compliance.
-              </p>
+              <p>With modern machinery, in-house testing laboratories, and we deliver durable, precise, and reliable products that meet global standards including ISO 9001:2015 certification and ISI 458 compliance.</p>
               
               <p>
                 Whether it's large-scale infrastructure projects or specialized requirements, 
