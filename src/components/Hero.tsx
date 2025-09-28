@@ -1,11 +1,11 @@
 import { CheckCircle, Award, Shield, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-pipes.jpg';
+import heroImage from '@/assets/hero-manufacturing.jpg';
 const Hero = () => {
   return <section id="home" className="relative min-h-screen flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Industrial precast concrete pipes manufacturing" className="w-full h-full object-cover" />
+        <img src={heroImage} alt="Precast concrete manufacturing facility with pipes and industrial equipment" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
       </div>
 
