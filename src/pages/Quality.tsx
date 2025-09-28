@@ -71,7 +71,7 @@ const Quality = () => {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="animate-slide-in-left px-[15px]">
                 <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-6">
-                  Consistent testing & Assurance <span className="text-accent">Testing Process</span>
+                  Consistent testing & Assurance 
                 </h2>
                 <div className="w-24 h-1 bg-accent mb-8"></div>
                 
