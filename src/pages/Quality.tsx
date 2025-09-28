@@ -84,10 +84,7 @@ const Quality = () => {
                 <div className="w-24 h-1 bg-accent mb-8"></div>
                 
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                  <p>
-                    Our state-of-the-art testing laboratory is equipped with modern machinery and 
-                    sophisticated testing equipment to ensure every product meets the highest standards.
-                  </p>
+                  <p>Our laboratory is equipped with modern machinery and sophisticated testing equipment to ensure every product meets the highest standards.</p>
                   
                   <p>
                     From raw material inspection to final product validation, our multi-stage 
