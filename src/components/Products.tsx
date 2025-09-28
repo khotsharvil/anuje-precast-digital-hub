@@ -1,7 +1,7 @@
 import { ArrowRight, CheckCircle } from 'lucide-react';
 const rccPipesImage = '/lovable-uploads/fe9ae56f-afe9-4d7e-93d5-f3c922ce86a2.png';
 const boxCulvertsImage = '/lovable-uploads/f8113a1c-7de7-4df1-ad1b-373ba789e31f.png';
-import customPrecastImage from '@/assets/custom-precast.jpg';
+import customPrecastImage from '@/assets/custom-precast-new.jpg';
 import productsShowcaseImage from '@/assets/products-showcase.jpg';
 const Products = () => {
   const products = [{
