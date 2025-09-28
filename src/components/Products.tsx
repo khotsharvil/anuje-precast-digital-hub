@@ -57,11 +57,6 @@ const Products = () => {
                   alt={product.alt}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <img 
-                  src={productsShowcaseImage} 
-                  alt="Products showcase collage"
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-90 transition-opacity duration-300"
-                />
               </div>
 
               <div className="space-y-4">
