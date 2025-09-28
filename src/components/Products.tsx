@@ -2,6 +2,7 @@ import { ArrowRight, CheckCircle } from 'lucide-react';
 const rccPipesImage = '/lovable-uploads/fe9ae56f-afe9-4d7e-93d5-f3c922ce86a2.png';
 const boxCulvertsImage = '/lovable-uploads/f8113a1c-7de7-4df1-ad1b-373ba789e31f.png';
 import customPrecastImage from '@/assets/custom-precast.jpg';
+import productsShowcaseImage from '@/assets/products-showcase.jpg';
 
 const Products = () => {
   const products = [
@@ -56,7 +57,11 @@ const Products = () => {
                   alt={product.alt}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <img 
+                  src={productsShowcaseImage} 
+                  alt="Products showcase collage"
+                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-90 transition-opacity duration-300"
+                />
               </div>
 
               <div className="space-y-4">
