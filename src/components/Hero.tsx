@@ -19,9 +19,7 @@ const Hero = () => {
           
           <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up" style={{
           animationDelay: '0.2s'
-        }}>
-            ISO 9001:2015 Certified | ISI 458 Standard | NHAI Approved
-          </p>
+        }}>ISO 9001:2015 Certified | ISI 458 Complaint | NHAI Approved</p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up" style={{
           animationDelay: '0.4s'
