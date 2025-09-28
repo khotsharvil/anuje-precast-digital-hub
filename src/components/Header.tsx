@@ -21,9 +21,7 @@ const Header = () => {
               <span>anujepipes@gmail.com</span>
             </a>
           </div>
-          <div className="text-primary font-medium">
-            ISO 9001:2015 Certified | NHAI Approved
-          </div>
+          <div className="text-primary font-medium">ISI 458 Complaint | NHAI Approved</div>
         </div>
 
         {/* Main navigation */}
