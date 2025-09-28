@@ -15,14 +15,6 @@ const Quality = () => {
     title: "ISI 458 Compliance",
     description: "All products strictly adhere to Indian Standard specifications for precast concrete pipes."
   }, {
-    icon: Users,
-    title: "Skilled Professionals",
-    description: "Expert team with years of experience in precast concrete manufacturing and quality control."
-  }, {
-    icon: Clock,
-    title: "Rigorous Testing Process",
-    description: "Every product undergoes comprehensive testing for strength, durability, and dimensional accuracy."
-  }, {
     icon: CheckCircle,
     title: "Quality Assurance",
     description: "Multi-stage quality checks from raw materials to finished products ensure superior performance."
