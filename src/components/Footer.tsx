@@ -9,10 +9,7 @@ const Footer = () => {
             <h3 className="font-montserrat font-bold text-2xl mb-6">
               Anuje Precast Pipes
             </h3>
-            <p className="text-white/80 mb-6 leading-relaxed">
-              Leading manufacturer of high-quality RCC Pipes, Box Culverts, and Custom Precast Solutions. 
-              Trusted by infrastructure companies across India.
-            </p>
+            <p className="text-white/80 mb-6 leading-relaxed">One of the leading manufacturer of high-quality RCC Pipes, Box Culverts, and Custom Precast Solutions. Trusted by infrastructure companies across India.</p>
             <div className="flex space-x-4">
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <Award className="h-5 w-5" />
