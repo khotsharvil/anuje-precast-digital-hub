@@ -73,10 +73,15 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-accent shrink-0" />
                 <span className="text-white/65 text-sm group-hover:text-accent transition-colors">anujepipes@gmail.com</span>
               </a>
-              <div className="flex items-start gap-3">
+              <a
+                href="https://maps.app.goo.gl/zmd1g8EHqawAxDU36"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 group"
+              >
                 <MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                <span className="text-white/65 text-sm leading-relaxed">Nipani, Karnataka, India</span>
-              </div>
+                <span className="text-white/65 text-sm leading-relaxed group-hover:text-accent transition-colors">Nipani, Karnataka, India</span>
+              </a>
             </div>
           </div>
         </div>

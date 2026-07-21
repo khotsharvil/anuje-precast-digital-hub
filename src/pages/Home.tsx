@@ -64,10 +64,9 @@ const Home = () => {
                 <div className="mx-auto w-14 h-14 bg-accent/10 rounded-full flex items-center justify-center mb-4">
                   <highlight.icon className="h-7 w-7 text-accent" />
                 </div>
-                <h3 className="font-montserrat font-bold text-base text-primary mb-1.5">
+                <h3 className="font-montserrat font-bold text-base text-primary">
                   {highlight.title}
                 </h3>
-                <p className="text-muted-foreground text-sm">{highlight.description}</p>
               </div>
             ))}
           </div>

@@ -1,4 +1,4 @@
-import { Shield, Award, Star, Building2 } from 'lucide-react';
+import { Shield, Award, Star } from 'lucide-react';
 const Clients = () => {
   const clients = ["R. B. Velhal Infra Pvt. Ltd.", "MKC Infrastructure Ltd.", "KMV Infra Ltd.", "S. M. Autade Pvt. Ltd.", "Megha Engg. & Infra Ltd.", "Shree Constructions", "Modern Infrastructure Co.", "Elite Engineering Works"];
   return <section id="clients" className="py-20 bg-muted-light/30">
@@ -39,9 +39,6 @@ const Clients = () => {
                 <span className="font-montserrat font-bold text-2xl text-accent/30 group-hover:text-accent transition-colors duration-300 w-10 shrink-0 select-none">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <Building2 className="h-5 w-5 text-accent group-hover:text-white transition-colors duration-300" />
-                </div>
                 <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-accent transition-colors duration-300">
                   {client}
                 </span>
