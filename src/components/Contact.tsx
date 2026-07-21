@@ -16,7 +16,18 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const lines = [
+      '*New enquiry from website*',
+      formData.name && `Name: ${formData.name}`,
+      formData.company && `Company: ${formData.company}`,
+      formData.phone && `Phone: ${formData.phone}`,
+      formData.email && `Email: ${formData.email}`,
+      formData.message && `Message: ${formData.message}`,
+    ].filter(Boolean);
+    window.open(
+      `https://wa.me/919822698811?text=${encodeURIComponent(lines.join('\n'))}`,
+      '_blank'
+    );
   };
 
   return (
