@@ -8,9 +8,9 @@ const Header = () => {
     return location.pathname === path;
   };
   return <header className="sticky top-0 z-50 bg-background border-b border-border">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-6">
         {/* Top bar with contact info */}
-        <div className="hidden md:flex justify-between items-center py-2 text-sm border-b border-border/50">
+        <div className="hidden md:flex justify-between items-center py-2.5 text-sm border-b border-border/50">
           <div className="flex items-center space-x-4 text-muted-foreground">
             <a href="tel:+919822698811" className="flex items-center space-x-2 hover:text-accent transition-colors">
               <Phone className="h-4 w-4 text-accent" />
@@ -25,7 +25,7 @@ const Header = () => {
         </div>
 
         {/* Main navigation */}
-        <nav className="flex justify-between items-center py-4">
+        <nav className="flex justify-between items-center py-5">
           <div className="font-montserrat font-bold text-2xl text-primary">
             Anuje Precast Pipes
           </div>

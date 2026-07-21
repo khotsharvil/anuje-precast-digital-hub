@@ -1,87 +1,104 @@
 import { Phone, Mail, MapPin, Award, Shield, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const Footer = () => {
-  return <footer className="bg-gradient-industrial text-white">
-      <div className="container mx-auto px-4 py-[49px] my-[20px]">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mx-[18px]">
+  return (
+    <footer className="bg-gradient-industrial text-white">
+      <div className="container mx-auto px-6 pt-16 pb-8">
+        <div className="flex flex-col lg:flex-row gap-y-10 mb-12">
           {/* Company Info */}
-          <div className="mx-0">
-            <h3 className="font-montserrat font-bold text-2xl mb-6">
-              Anuje Precast Pipes
-            </h3>
-            <p className="text-white/80 mb-6 leading-relaxed">One of the leading manufacturer of high-quality RCC Pipes, Box Culverts, and Custom Precast Solutions. Trusted by infrastructure companies across India.</p>
-            <div className="flex space-x-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <Award className="h-5 w-5" />
-              </div>
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <Shield className="h-5 w-5" />
-              </div>
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <CheckCircle className="h-5 w-5" />
-              </div>
+          <div className="lg:w-[28%] lg:pr-10">
+            <h3 className="font-montserrat font-bold text-xl mb-4">Anuje Precast Pipes</h3>
+            <div className="w-8 h-0.5 bg-accent mb-5" />
+            <p className="text-white/70 text-sm leading-relaxed mb-6">
+              One of the leading manufacturers of high-quality RCC Pipes, Box Culverts, and Custom
+              Precast Solutions. Trusted by infrastructure companies across India.
+            </p>
+            <div className="flex gap-3">
+              {[Award, Shield, CheckCircle].map((Icon, i) => (
+                <div key={i} className="w-9 h-9 bg-accent/20 border border-accent/30 rounded-lg flex items-center justify-center hover:bg-accent transition-colors duration-300">
+                  <Icon className="h-4 w-4" />
+                </div>
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="font-montserrat font-bold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3">
-              <li><Link to="/" className="text-white/80 hover:text-accent transition-colors">Home</Link></li>
-              <li><Link to="/about" className="text-white/80 hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link to="/products" className="text-white/80 hover:text-accent transition-colors">Products</Link></li>
-              <li><Link to="/quality" className="text-white/80 hover:text-accent transition-colors">Quality</Link></li>
-              <li><Link to="/clients" className="text-white/80 hover:text-accent transition-colors">Clients</Link></li>
-              <li><Link to="/contact" className="text-white/80 hover:text-accent transition-colors">Contact</Link></li>
-              <li><Link to="/downloads" className="text-white/80 hover:text-accent transition-colors">Downloads</Link></li>
+          <div className="lg:w-[24%] lg:px-10 lg:border-l lg:border-white/10">
+            <h4 className="font-montserrat font-bold text-base mb-4">Quick Links</h4>
+            <div className="w-8 h-0.5 bg-accent mb-5" />
+            <ul className="space-y-2.5">
+              {[
+                { to: "/", label: "Home" },
+                { to: "/about", label: "About Us" },
+                { to: "/products", label: "Products" },
+                { to: "/quality", label: "Quality" },
+                { to: "/clients", label: "Clients" },
+                { to: "/contact", label: "Contact" },
+                { to: "/downloads", label: "Downloads" },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-white/65 text-sm hover:text-accent transition-colors duration-200">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Products */}
-          <div>
-            <h4 className="font-montserrat font-bold text-lg mb-6">Our Products</h4>
-            <ul className="space-y-3">
-              <li className="text-white/80">RCC Pipes (NP3 & NP4)</li>
-              <li className="text-white/80">Box Culverts</li>
-              <li className="text-white/80">Custom Precast Solutions</li>
-              
-              
+          <div className="lg:w-[24%] lg:px-10 lg:border-l lg:border-white/10">
+            <h4 className="font-montserrat font-bold text-base mb-4">Our Products</h4>
+            <div className="w-8 h-0.5 bg-accent mb-5" />
+            <ul className="space-y-2.5">
+              {["RCC Pipes (NP3 & NP4)", "Box Culverts", "Custom Precast Solutions"].map((item) => (
+                <li key={item} className="text-white/65 text-sm flex items-center gap-2">
+                  <div className="w-1 h-1 bg-accent rounded-full shrink-0" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="font-montserrat font-bold text-lg mb-6">Contact Info</h4>
+          <div className="lg:w-[24%] lg:pl-10 lg:border-l lg:border-white/10">
+            <h4 className="font-montserrat font-bold text-base mb-4">Contact Info</h4>
+            <div className="w-8 h-0.5 bg-accent mb-5" />
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-accent" />
-                <span className="text-white/80">+91 9822698811</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-accent" />
-                <span className="text-white/80">anujepipes@gmail.com</span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-accent mt-1" />
-                <span className="text-white/80">Kolhapur, Maharashtra, India</span>
+              <a href="tel:+919822698811" className="flex items-center gap-3 group">
+                <Phone className="h-4 w-4 text-accent shrink-0" />
+                <span className="text-white/65 text-sm group-hover:text-accent transition-colors">+91 9822698811</span>
+              </a>
+              <a href="mailto:anujepipes@gmail.com" className="flex items-center gap-3 group">
+                <Mail className="h-4 w-4 text-accent shrink-0" />
+                <span className="text-white/65 text-sm group-hover:text-accent transition-colors">anujepipes@gmail.com</span>
+              </a>
+              <div className="flex items-start gap-3">
+                <MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                <span className="text-white/65 text-sm leading-relaxed">Nipani, Karnataka, India</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-white/80 text-sm">
+        {/* Bottom bar */}
+        <div className="border-t border-white/15 pt-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-white/50 text-sm">
               © {new Date().getFullYear()} Anuje Precast Pipes. All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm">
-              <span className="text-white/80">ISO 9001:2015 Certified</span>
-              <span className="text-white/80">ISI 458 Compliant</span>
-              <span className="text-white/80">NHAI Approved</span>
+            <div className="flex gap-5 text-xs text-white/50">
+              <span>ISO 9001:2015 Certified</span>
+              <span>·</span>
+              <span>ISI 458 Compliant</span>
+              <span>·</span>
+              <span>NHAI Approved</span>
             </div>
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

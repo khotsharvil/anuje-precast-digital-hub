@@ -1,88 +1,90 @@
-import { CheckCircle, Award, Shield, Users } from 'lucide-react';
+import { CheckCircle, Award, Shield, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-manufacturing.jpg';
+
 const Hero = () => {
-  return <section id="home" className="relative min-h-screen flex items-center">
+  return (
+    <section id="home" className="relative min-h-screen flex items-center">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Precast concrete manufacturing facility with pipes and industrial equipment" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/75 via-primary/55 to-primary/35"></div>
+        <img
+          src={heroImage}
+          alt="Precast concrete manufacturing facility"
+          className="w-full h-full object-cover"
+        />
+        {/* Strong gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10 py-0 my-0">
-        <div className="max-w-4xl my-[12px]">
-          <h1 className="font-montserrat font-bold text-5xl md:text-7xl text-white mb-6 animate-fade-in-up my-[11px]">
-            Building Durable Futures with
-            <span className="text-accent block mt-2">Trusted Precast Solutions</span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-2xl animate-fade-in-up" style={{
-          animationDelay: '0.2s'
-        }}>ISO 9001:2015 Certified | ISI 458 Complaint | NHAI Approved</p>
+      <div className="container mx-auto px-6 relative z-10 py-32">
+        <div className="max-w-3xl">
+          {/* Eyebrow */}
+          <div className="flex items-center gap-3 mb-6 animate-fade-in-up">
+            <div className="w-10 h-0.5 bg-accent" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest">
+              Trusted Precast Manufacturer
+            </span>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up" style={{
-          animationDelay: '0.4s'
-        }}>
-            <button className="btn-hero">
+          {/* Title */}
+          <h1 className="font-montserrat font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-6 animate-fade-in-up leading-tight">
+            Building Durable Futures
+            <span className="text-accent block mt-1">with Trusted Precast Solutions</span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="text-base md:text-lg text-white/80 mb-10 max-w-xl animate-fade-in-up leading-relaxed" style={{ animationDelay: '0.2s' }}>
+            ISO 9001:2015 Certified &nbsp;·&nbsp; ISI 458 Compliant &nbsp;·&nbsp; NHAI Approved Supplier
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-16 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+            <button className="btn-hero inline-flex items-center justify-center gap-2">
               Request a Quote
+              <ArrowRight className="h-4 w-4" />
             </button>
-            <Link to="/products" className="btn-outline-hero text-slate-50">
+            <Link to="/products" className="btn-outline-hero inline-flex items-center justify-center text-white">
               Explore Products
             </Link>
           </div>
 
-          {/* Trust Indicators */}
-          <div style={{
-          animationDelay: '0.6s'
-        }} className="grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-in-up py-0 my-0 mx-0 px-0">
-            <div className="flex items-center space-x-3 text-white">
-              <div className="p-2 bg-accent/20 rounded-lg">
-                <Award className="h-6 w-6 text-accent" />
+          {/* Trust Badges */}
+          <div
+            className="grid grid-cols-2 sm:grid-cols-4 gap-3 animate-fade-in-up"
+            style={{ animationDelay: '0.5s' }}
+          >
+            {[
+              { icon: Award, label: 'ISO 9001:2015', sub: 'Certified' },
+              { icon: CheckCircle, label: 'ISI 458', sub: 'Compliant' },
+              { icon: Shield, label: 'NHAI Approved', sub: 'Supplier' },
+              { icon: Users, label: '30+ Companies', sub: 'Trust Us' },
+            ].map(({ icon: Icon, label, sub }) => (
+              <div
+                key={label}
+                className="flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/15 rounded-xl px-3 py-2.5"
+              >
+                <div className="p-1.5 bg-accent/25 rounded-lg shrink-0">
+                  <Icon className="h-4 w-4 text-accent" />
+                </div>
+                <div>
+                  <div className="font-semibold text-white text-xs leading-tight">{label}</div>
+                  <div className="text-white/60 text-[11px] mt-0.5">{sub}</div>
+                </div>
               </div>
-              <div>
-                <div className="font-semibold">ISO 9001:2015</div>
-                <div className="text-sm text-white/80">Certified</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3 text-white">
-              <div className="p-2 bg-accent/20 rounded-lg">
-                <CheckCircle className="h-6 w-6 text-accent" />
-              </div>
-              <div>
-                <div className="font-semibold">ISI 458</div>
-                <div className="text-sm text-white/80">Compliant</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3 text-white py-0 mx-0">
-              <div className="p-2 bg-accent/20 rounded-lg">
-                <Shield className="h-6 w-6 text-accent" />
-              </div>
-              <div>
-                <div className="font-semibold">NHAI Approved</div>
-                <div className="text-sm text-white/80">Supplier</div>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-3 text-white">
-              <div className="p-2 bg-accent/20 rounded-lg">
-                <Users className="h-6 w-6 text-accent" />
-              </div>
-              <div>
-                <div className="font-semibold">30+ Companies</div>
-                <div className="text-sm text-white/80">Trust Us</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/50">
+        <span className="text-xs tracking-widest uppercase">Scroll</span>
+        <div className="w-px h-8 bg-white/30" />
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

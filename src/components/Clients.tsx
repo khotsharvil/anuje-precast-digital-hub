@@ -1,15 +1,20 @@
-import { Shield, Star, Award } from 'lucide-react';
+import { Shield, Award, Star, Building2 } from 'lucide-react';
 const Clients = () => {
   const clients = ["R. B. Velhal Infra Pvt. Ltd.", "MKC Infrastructure Ltd.", "KMV Infra Ltd.", "S. M. Autade Pvt. Ltd.", "Megha Engg. & Infra Ltd.", "Shree Constructions", "Modern Infrastructure Co.", "Elite Engineering Works"];
   return <section id="clients" className="py-20 bg-muted-light/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <div className="w-8 h-0.5 bg-accent" />
+            <span className="text-accent font-semibold text-sm uppercase tracking-widest">Our Partners</span>
+            <div className="w-8 h-0.5 bg-accent" />
+          </div>
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
             Trusted by Leading <span className="text-accent">Infrastructure Companies</span>
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6"></div>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We proudly supply to some of India's most respected construction & infrastructure companies, 
+          <div className="w-16 h-1 bg-accent mx-auto mb-5 rounded-full" />
+          <p className="text-base text-muted-foreground max-w-xl mx-auto">
+            We proudly supply to some of India's most respected construction & infrastructure companies,
             building lasting partnerships based on quality and reliability.
           </p>
         </div>
@@ -23,20 +28,27 @@ const Clients = () => {
           </div>
         </div>
 
-        {/* Client Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {clients.map((client, index) => <div key={index} className="card-industrial text-center group animate-fade-in-up" style={{
-          animationDelay: `${index * 0.1}s`
-        }}>
-              <div className="p-6">
-                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
-                  <Star className="h-8 w-8" />
+        {/* Client List */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="bg-card border border-border rounded-2xl overflow-hidden shadow-elegant">
+            {clients.map((client, index) => (
+              <div
+                key={index}
+                className="group flex items-center gap-5 px-8 py-5 border-b border-border last:border-b-0 hover:bg-accent/5 transition-all duration-300"
+              >
+                <span className="font-montserrat font-bold text-2xl text-accent/30 group-hover:text-accent transition-colors duration-300 w-10 shrink-0 select-none">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                  <Building2 className="h-5 w-5 text-accent group-hover:text-white transition-colors duration-300" />
                 </div>
-                <h3 className="font-semibold text-foreground text-lg leading-tight">
+                <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-accent transition-colors duration-300">
                   {client}
-                </h3>
+                </span>
+                <div className="ml-auto w-2 h-2 rounded-full bg-accent/20 group-hover:bg-accent transition-colors duration-300 shrink-0" />
               </div>
-            </div>)}
+            ))}
+          </div>
         </div>
 
         {/* Testimonial */}
@@ -46,8 +58,8 @@ const Clients = () => {
               {[...Array(5)].map((_, i) => <Star key={i} className="h-6 w-6 text-accent fill-current" />)}
             </div>
             <blockquote className="text-xl text-muted-foreground italic mb-6 leading-relaxed">
-              "Anuje Precast Pipes has been our trusted partner for multiple infrastructure projects. 
-              Their commitment to quality, timely delivery, and professional service makes them our 
+              "Anuje Precast Pipes has been our trusted partner for multiple infrastructure projects.
+              Their commitment to quality, timely delivery, and professional service makes them our
               preferred choice for all precast solutions."
             </blockquote>
             <div className="font-semibold text-primary">
@@ -55,8 +67,6 @@ const Clients = () => {
             </div>
           </div>
         </div>
-
-        
       </div>
     </section>;
 };
